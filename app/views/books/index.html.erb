@@ -1,43 +1,26 @@
 <h1>Books</h1>
 
-<teble>
-    
-  <thead>
-      
-      <tr>
-      
-        <th>Title</th>
-      
-        <th>body</th>
-      
-        <th></th>
-      
-      </tr>
-      
-  </thead>
+<% @books.each do |book| %>
+
+  <p>title</p>
   
-  <tbody>
-    
-    <tr>
-      
-      <td>fdfdf</td>
-      <td>fdfdf</td>
-      <td>dfdf</td>
-      <td>dfdf</td>
-      <td>dfdf</td>
-    
-    </tr>
- 
-  </tbody>
-    
-</teble>
+  <span><%= book.title %></span>
+  
+  <p>body</p>
+  
+  <span><%= book.body %></span>
+  
+　<%= link_to "Show", book_path(book.id) %>
+　
+　<%= link_to "Edit", edit_book_path(book.id) %>
+　
+　<%= link_to "Destroy", book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
+　
+　
+　
+　
 
-
-
-
-
-
-
+<% end %>
 
 
 
