@@ -67,4 +67,6 @@ table {
     border-color: gray;
 }
 
-h2 
+h2 {
+  margin-top: 50px;
+}
